@@ -27,6 +27,7 @@ html {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /*your style rules go in here */
+  padding-top: 50px;
  
 }
 
@@ -44,13 +45,14 @@ nav {
   /* display: none; */
   background-color: darkgray;
   font-family: 'Libre Baskerville', Georgia, serif;  
-  font-size: 1em;
+  font-size: 1rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
-  
+
+   
   
 }
 
@@ -96,6 +98,16 @@ li ul {
 nav ul li:hover ul {
 display:flex;
 flex-direction: column;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: darkred;
 }
 
 
@@ -196,7 +208,7 @@ margin: 0 auto;
   font-size: 1.5em;
   color: white;
   padding: 8px;
-  text-align: center;
+  /* text-align: center; */
 }
 .dramatishead {
   background-color: darkgray;
@@ -267,6 +279,8 @@ margin: 0 auto;
 .character_role {
 margin-left: 1em;
 color: black;
+font-family: 'Tinos',Georgia, serif;
+font-size: 1em;
 
 }
 .stage_directions_inline {
@@ -397,4 +411,23 @@ color: black;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
+    float: right;
+    cursor: pointer;
+  }
 
+  /*   but we also need to hide the menu until that hamburger is clicked */
+
+  nav ul {
+    display: none;
+  }
+
+  /*when the hamburger is clicked the ul below it will be made to show */
+  /*  the tilda ~ points to the next sibling selector */
+
+  input[type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+}
