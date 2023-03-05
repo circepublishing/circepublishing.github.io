@@ -51,9 +51,16 @@ nav {
   left: 0;
   width: 100%;
   z-index: 100;
+}
 
-   
-  
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: darkred;
 }
 
 nav ul {
@@ -100,15 +107,6 @@ display:flex;
 flex-direction: column;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: darkred;
-}
 
 
 
@@ -366,6 +364,7 @@ font-size: 1em;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+   
   }
 
   /* the main items have a disired width of 6rem  */
@@ -411,18 +410,21 @@ font-size: 1em;
   }
 }
 
+@media screen and (max-width: 700px) {
 
+  nav ul{
+    display: none;
+    flex-direction: column;
+  }
   .hamburger {
     display: block;
     float: right;
     cursor: pointer;
   }
-
+}
   /*   but we also need to hide the menu until that hamburger is clicked */
 
-  nav ul {
-    display: none;
-  }
+
 
   /*when the hamburger is clicked the ul below it will be made to show */
   /*  the tilda ~ points to the next sibling selector */
@@ -430,4 +432,4 @@ font-size: 1em;
   input[type="checkbox"]:checked ~ ul {
     display: block;
   }
-  
+
