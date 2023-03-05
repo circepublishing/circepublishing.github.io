@@ -44,12 +44,13 @@ nav {
   /* display: none; */
   background-color: darkgray;
   font-family: 'Libre Baskerville', Georgia, serif;  
-  font-size: 0.6rem;
+  font-size: 1em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
+  
   
 }
 
