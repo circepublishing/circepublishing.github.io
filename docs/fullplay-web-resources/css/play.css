@@ -411,7 +411,7 @@ font-size: 1em;
   }
 }
 
-@media screen and (max-width: 900px) {
+
   .hamburger {
     display: block;
     float: right;
@@ -430,4 +430,4 @@ font-size: 1em;
   input[type="checkbox"]:checked ~ ul {
     display: block;
   }
-  }
+  
