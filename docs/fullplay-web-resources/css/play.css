@@ -430,4 +430,4 @@ font-size: 1em;
   input[type="checkbox"]:checked ~ ul {
     display: block;
   }
-}
+  }
